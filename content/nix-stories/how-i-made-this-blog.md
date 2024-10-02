@@ -137,4 +137,4 @@ By leveraging Nix, I've created a blog that's not only easy to maintain but also
 
 In future posts, I'll dive deeper into specific aspects of this setup, including customizing the HTML output, optimizing the Nix build, and more advanced CI/CD techniques.
 
-Feel free to check out the full source code on my [GitHub repository](https://github.com/wscoble) to see how all these pieces fit together.
+Feel free to check out the full source code on my [GitHub repository](https://github.com/wscoble/scoble.me.blog) to see how all these pieces fit together.
