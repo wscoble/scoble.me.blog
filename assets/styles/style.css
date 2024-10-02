@@ -1,0 +1,283 @@
+/* Import Fira Mono font */
+@import url('https://fonts.googleapis.com/css2?family=Fira+Mono:wght@400;500;700&display=swap');
+
+/* Reset and base styles */
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: 'Fira Mono', monospace;
+  line-height: 1.6;
+  color: #f0f0f0;
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 20px;
+  background-color: #282c34;
+  font-size: 16px;
+  font-weight: 400;
+  opacity: 1;
+  transition: opacity 0.15s ease-in-out;
+}
+
+body.htmx-swapping {
+  opacity: 0;
+}
+
+/* Typography */
+h1, h2, h3, h4, h5, h6 {
+  margin-bottom: 1.5rem;
+  line-height: 1.2;
+  font-weight: 700;
+  color: #61afef;
+}
+
+h1 {
+  font-size: 2.5rem;
+  margin-top: 2rem;
+  border-bottom: 2px solid #61afef;
+  padding-bottom: 0.5rem;
+}
+
+h2 {
+  font-size: 2rem;
+  margin-top: 2rem;
+  color: #c678dd;
+}
+
+h3 {
+  font-size: 1.75rem;
+  margin-top: 1.5rem;
+  color: #98c379;
+}
+
+p {
+  margin-bottom: 1.5rem;
+}
+
+/* Links */
+a {
+  color: #e5c07b;
+  text-decoration: none;
+  border-bottom: 1px solid transparent;
+  transition: border-bottom-color 0.3s ease;
+}
+
+a:hover {
+  border-bottom-color: #e5c07b;
+}
+
+/* Lists */
+ul, ol {
+  margin-bottom: 1.5rem;
+  padding-left: 2rem;
+}
+
+li {
+  margin-bottom: 0.5rem;
+}
+
+/* Images */
+img {
+  max-width: 100%;
+  height: auto;
+  display: block;
+  margin: 2rem auto;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3);
+}
+
+/* Code blocks */
+pre {
+    background-color: #282a36; /* Background for code blocks */
+    color: #f8f8f2; /* Default text color */
+    padding: 1em; /* Padding inside the code block */
+    border-radius: 0.3em; /* Rounded corners */
+    overflow: auto; /* Allow scrolling if content overflows */
+    margin: 1.5em 0; /* Margin around the code block */
+    border-left: 4px solid #56b6c2; /* Left border */
+}
+
+code {
+    background-color: #282a36; /* Background for inline code */
+    color: #f8f8f2; /* Default text color */
+    padding: 0.1em 0.3em; /* Padding for inline code */
+    border-radius: 0.3em; /* Rounded corners */
+}
+
+/* Syntax highlighting for specific languages */
+.language-python .keyword {
+    color: #8be9fd; /* Keywords */
+}
+
+.language-python .string {
+    color: #50fa7b; /* Strings */
+}
+
+.language-python .comment {
+    color: #6272a4; /* Comments */
+}
+
+.language-python .function {
+    color: #ff79c6; /* Functions */
+}
+
+/* New JavaScript syntax highlighting */
+.language-javascript .keyword {
+    color: #f1fa8c; /* Keywords */
+}
+
+.language-javascript .string {
+    color: #50fa7b; /* Strings */
+}
+
+.language-javascript .comment {
+    color: #6272a4; /* Comments */
+}
+
+.language-javascript .function {
+    color: #ff79c6; /* Functions */
+}
+
+/* Responsive design */
+@media (max-width: 600px) {
+  body {
+    padding: 15px;
+    font-size: 16px;
+  }
+
+  h1 {
+    font-size: 2.25rem;
+  }
+
+  h2 {
+    font-size: 2rem;
+  }
+
+  h3 {
+    font-size: 1.5rem;
+  }
+}
+
+/* Blog post styles */
+.post-meta {
+  font-size: 0.9rem;
+  color: #abb2bf;
+  margin-bottom: 1.5rem;
+  font-style: italic;
+}
+
+.post-content {
+  margin-bottom: 3rem;
+}
+
+/* Navigation */
+nav {
+  margin-bottom: 3rem;
+  border-bottom: 1px solid #3e4451;
+  padding-bottom: 1rem;
+}
+
+nav ul {
+  list-style-type: none;
+  padding: 0;
+  display: flex;
+  justify-content: center;
+}
+
+nav ul li {
+  margin: 0 1rem;
+}
+
+nav ul li a {
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  font-size: 0.9rem;
+  color: #61afef;
+}
+
+/* Footer */
+footer {
+  margin-top: 3rem;
+  text-align: center;
+  font-size: 0.9rem;
+  color: #abb2bf;
+  border-top: 1px solid #3e4451;
+  padding-top: 1rem;
+}
+
+/* Additional typographic enhancements */
+blockquote {
+  border-left: 4px solid #56b6c2;
+  padding-left: 1rem;
+  margin: 1.5rem 0;
+  font-style: italic;
+  color: #abb2bf;
+}
+
+hr {
+  border: none;
+  border-top: 2px solid #3e4451;
+  margin: 2rem 0;
+}
+
+/* Table styles */
+table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-bottom: 1.5rem;
+}
+
+th, td {
+  border: 1px solid #3e4451;
+  padding: 0.5rem;
+  text-align: left;
+}
+
+th {
+  background-color: #3e4451;
+  font-weight: 700;
+  color: #61afef;
+}
+
+/* Add some color accents */
+::selection {
+  background-color: #61afef;
+  color: #282c34;
+}
+
+/* Replace the existing SPA Transition Effect with this */
+#content {
+    opacity: 1;
+    transition: opacity 0.3s ease-in-out;
+}
+
+#content.fade-out {
+    opacity: 0;
+}
+
+/* HTMX Transition Effect */
+#content.htmx-swapping {
+    opacity: 0;
+    transition: opacity 0.15s ease-out;
+}
+
+#content {
+    opacity: 1;
+    transition: opacity 0.15s ease-in;
+}
+
+/* Terminal-like cursor effect */
+.cursor::after {
+  content: '█';
+  animation: cursor 1s infinite;
+  opacity: 0;
+  color: #98c379;
+}
+
+@keyframes cursor {
+  0%, 100% { opacity: 0; }
+  50% { opacity: 1; }
+}

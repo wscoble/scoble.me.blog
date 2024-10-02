@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{{title}}</title>
+    <meta name="description" content="{{description}}">
+    <link rel="preload" href="https://fonts.googleapis.com/css2?family=Fira+Sans:ital,wght@0,400;0,500;0,600;1,400;1,500;1,600&family=Fira+Mono&display=swap" as="style">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Fira+Sans:ital,wght@0,400;0,500;0,600;1,400;1,500;1,600&family=Fira+Mono&display=swap">
+    <link rel="stylesheet" href="/assets/styles/style.css">
+    <link rel="icon" type="image/png" href="/assets/favicon.png">
+    <script src="https://unpkg.com/htmx.org@1.9.10" integrity="sha384-D1Kt99CQMDuVetoL1lrYwg5t+9QdHe7NLX/SoJYkXDFfX37iInKRy5xLSi8nO7UC" crossorigin="anonymous"></script>
+</head>
+<body>
+    <header>
+        <nav>
+            <ul>
+                <li><a href="/" hx-get="/" hx-target="#content" hx-push-url="true">Home</a></li>
+                <li><a href="/about.html" hx-get="/about.html" hx-target="#content" hx-push-url="true">About</a></li>
+                <li><a href="/socials.html" hx-get="/socials.html" hx-target="#content" hx-push-url="true">Connect</a></li>
+            </ul>
+        </nav>
+    </header>
+    <main id="content" hx-target="this" hx-swap="innerHTML transition:true">
+        {{content}}
+    </main>
+    <footer>
+        <nav>
+            <ul>
+                <li><a href="/" hx-get="/" hx-target="#content" hx-push-url="true">Home</a></li>
+                <li><a href="/about.html" hx-get="/about.html" hx-target="#content" hx-push-url="true">About</a></li>
+                <li><a href="/socials.html" hx-get="/socials.html" hx-target="#content" hx-push-url="true">Connect</a></li>
+            </ul>
+        </nav>
+        <p>&copy; 2024 Scott Scoble. All rights reserved.</p>
+    </footer>
+</body>
+</html>
