@@ -21,6 +21,8 @@ jobs:
           nix_path: nixpkgs=channel:nixos-unstable
 
       - run: nix build .#blog
+      - run: |
+          ls -la ./result
 
       - name: Setup Pages
         uses: actions/configure-pages@v5
