@@ -65,10 +65,6 @@ a {
   transition: border-bottom-color 0.3s ease;
 }
 
-a:hover {
-  border-bottom-color: #e5c07b;
-}
-
 /* Lists */
 ul, ol {
   margin-bottom: 1.5rem;
@@ -166,6 +162,23 @@ code {
   color: #abb2bf;
   margin-bottom: 1.5rem;
   font-style: italic;
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+}
+
+.post-meta .author {
+  font-weight: bold;
+  color: #c678dd;
+}
+
+.post-meta .date-divider {
+  margin: 0 0.5em;
+  color: #5c6370;
+}
+
+.post-meta .published-date {
+  color: #61afef;
 }
 
 .post-content {
@@ -280,4 +293,37 @@ th {
 @keyframes cursor {
   0%, 100% { opacity: 0; }
   50% { opacity: 1; }
+}
+
+/* Header anchor links */
+.header-anchor {
+  text-decoration: none;
+  color: inherit;
+}
+
+.header-anchor::after {
+  content: '\1F517';
+  opacity: 0;
+  font-size: 0.8em;
+  margin-left: 0.5em;
+  transition: opacity 0.2s ease-in-out;
+  color: #61afef;
+}
+
+h1:hover .header-anchor::after,
+h2:hover .header-anchor::after,
+h3:hover .header-anchor::after,
+h4:hover .header-anchor::after,
+h5:hover .header-anchor::after,
+h6:hover .header-anchor::after {
+  opacity: 1;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  display: flex;
+  align-items: center;
+}
+
+h1 a, h2 a, h3 a, h4 a, h5 a, h6 a {
+  text-decoration: none;
 }

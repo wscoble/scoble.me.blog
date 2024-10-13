@@ -1,8 +1,8 @@
 ---
 title: "How I Made This Blog"
 description: "A detailed look at the process of creating my personal blog using Nix and custom static site generation"
-date: 2024-03-14
-lastmod: 2024-03-14
+date: 2024-09-14
+lastmod: 2024-09-14
 draft: false
 toc: true
 tags:
@@ -14,6 +14,9 @@ author: "Scott Scoble"
 ---
 
 # How I Made This Blog
+
+{{TAGLINE}}
+
 
 As a DevOps professional, I'm always looking for efficient and reproducible ways to manage projects. When it came to creating my personal blog, I decided to leverage the power of Nix to build a custom static site that's easy to maintain and deploy. In this post, I'll walk you through the process of how I set up this blog.
 

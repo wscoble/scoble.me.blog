@@ -34,5 +34,17 @@
         </nav>
         <p>&copy; 2024 Scott Scoble. All rights reserved.</p>
     </footer>
+    <script>
+      document.addEventListener('DOMContentLoaded', function() {
+        if (window.location.hash) {
+          const targetElement = document.querySelector(window.location.hash);
+          if (targetElement) {
+            setTimeout(function() {
+              targetElement.scrollIntoView({behavior: 'smooth', block: 'start'});
+            }, 100);
+          }
+        }
+      });
+    </script>
 </body>
 </html>
